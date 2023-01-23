@@ -1,15 +1,18 @@
+import fetch from "node-fetch";
 
+async function getText(file) {
 
-export async function getText(file) {    
     let myObject = await fetch(file)
     let myText = await myObject.text()
-    stringAllWebpage = myText.replace(/\r?\n/)
+    let stringAllWebpage = myText.replace(/\r?\n/,'')
     return stringAllWebpage
 }
-console.log(stringAllWebpage.length)
+//console.log(stringAllWebpage.length)
 
-export function test(){
+function test() {
     console.log("test")
 }
 
-console.log("done")
+export default { getText, test };
+
+//console.log("done")
