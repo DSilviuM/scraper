@@ -12,10 +12,6 @@ import webpageParser from './stringAllWebpage_dkp.js';
 // 2000
 // )
 
-const fetch = (...args) =>
-  import('node-fetch').then(({ default: fetch }) => fetch(...args));
-
-
 async function getText(){
 
     const text = await webpageParser.getText('https://www.apavital.ro/intreruperi-de-apa');
